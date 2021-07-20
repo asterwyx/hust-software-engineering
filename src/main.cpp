@@ -1,10 +1,7 @@
-#include <iostream>
 #include "cmdline.h"
-#include <cstdlib>
 
+player_t* next_player = nullptr;
 extern int init_money;
-
-p_player_t next_player = nullptr;
 
 
 int main() {
@@ -16,11 +13,8 @@ int main() {
     while (true) {
         show_cmd();
         command = get_cmd();
-        if (command == "quit") {
-            break;
-        } else {
-            parse_cmd(command);
-        }
+        if (command == "quit") break;
+        parse_cmd(command);
         plot_map();
     }
     return 0;

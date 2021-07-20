@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import argparse
 import configparser
 import csv
@@ -117,7 +116,7 @@ def export_failed_case(filename, out_kv, ans_kv):
 
     fout = list()
     fout.append('stderr'.rjust(w_out, ' ') + '|expected')
-        
+
     while i_out < l_out:
         if out_kv[i_out] == ans_kv[i_ans]:
             fout.append(out_kv[i_out].ljust(w_out, ' ') + '|' + ans_kv[i_ans])
@@ -127,7 +126,7 @@ def export_failed_case(filename, out_kv, ans_kv):
             fout.append(out_kv[i_out].ljust(w_out, ' ') + '|')
             i_out = i_out + 1
         pass
-    
+
     while i_ans < l_ans:
         fout.append(' ' * w_out + '|' + ans_kv[i_ans])
         i_ans = i_ans + 1

@@ -1,6 +1,4 @@
 #include "player.h"
-#include "string"
-
 
 static vector<player_t> player_vec;
 extern int sleep_time;
@@ -45,7 +43,7 @@ void add_player(char uid)
 }
 
 
-p_player_t get_player_by_uid(char uid) {
+player_t* get_player_by_uid(char uid) {
     if (std::isalpha(uid)) {
         uid = std::toupper(uid);
     }
@@ -58,7 +56,7 @@ p_player_t get_player_by_uid(char uid) {
 }
 
 
-p_player_t skip_player(p_player_t next_player) {
+player_t* skip_player(player_t* next_player) {
 
     if (!next_player) return nullptr;
 
@@ -67,7 +65,7 @@ p_player_t skip_player(p_player_t next_player) {
         if (next_player->n_empty_rounds > 0) next_player->n_empty_rounds -= 1;
         if (next_player->n_god_buff > 0) next_player->n_god_buff -= 1;
 
-        std::cout << "玩家" << next_player->name << "轮空" << std::endl;
+        cout << "玩家 " << next_player->name << " 轮空" << endl;
         Sleep(sleep_time);
 
         auto players = get_player_vec();

@@ -3,9 +3,9 @@
     "maxlevel": 1000,
     "import": [
         "basetest",
-        "house_business",
+        "estate_business",
         "bankrupt",
-        "sell_houses",
+        "sell_house",
         "barrier",
         "gift",
         "god",
@@ -13,7 +13,7 @@
         "mine",
         "park",
         "robot",
-        "toolhouse"
+        "tool_house"
     ],
     "case": []
 }

@@ -1,6 +1,7 @@
 cmake-build-debug/
 .idea/
+.vscode/
+
+testcases/result/
 *.csv
 *.xlsx
-.vscode/
-testcases/result/
